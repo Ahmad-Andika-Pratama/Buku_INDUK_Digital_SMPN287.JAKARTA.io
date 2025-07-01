@@ -1,0 +1,490 @@
+body {
+  background-color: rgb(222, 250, 255);
+}
+
+/* close */
+
+nav div {
+  background-color: lightseagreen;
+  height: 1.8rem;
+  width: 1.6rem;
+  min-width: 0.1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s linear;
+  position: fixed;
+  z-index: 100000;
+}
+
+nav div:hover {
+  background-color: lightgray;
+}
+
+nav div a {
+  color: black;
+}
+
+/*? data siswa yang lengkap */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 7rem;
+  flex-wrap: wrap;
+}
+
+.container .foto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(106, 197, 253, 0.482);
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  cursor: grab;
+}
+.container .foto img {
+  transform: translate3d(0, 0, 60px);
+  margin-top: 1rem;
+}
+.container .foto h1 {
+  color: #000;
+  font-size: 1.8rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  opacity: 0;
+  transform: translate3d(0, 0, 70px);
+  transition: .5s;
+}
+.container .foto:hover h1 {
+  color: rgb(0, 104, 184);
+  text-shadow: 3.5px 3.5px 10px black;
+  opacity: .6;
+}
+
+.container .keterangan {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(35, 167, 255, 0.711);
+  border-radius: 10px;
+  height: 30rem;
+  overflow: auto;
+}
+.container .keterangan .data {
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+.container .keterangan p {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.container .keterangan .pendidikan_sebelumnya {
+  font-size: 1.3rem;
+  font-family: sans-serif;
+  margin-left: 1rem;
+}
+.container .keterangan .pendidikan_sebelumnya p {
+  font-size: 1rem;
+  font-family: serif;
+  font-weight: bold;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.container .keterangan .pindahan {
+  font-size: 1.3rem;
+  font-family: sans-serif;
+  margin-left: 1rem;
+}
+.container .keterangan .pindahan p {
+  font-size: 1rem;
+  font-family: serif;
+  font-weight: bold;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.container .keterangan .diterima_disekolah {
+  font-size: 1rem;
+  font-family: sans-serif;
+  margin-left: 1rem;
+}
+.container .keterangan .diterima_disekolah p {
+  font-size: 1rem;
+  font-family: serif;
+  font-weight: bold;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/* scrool */
+.scroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8.5rem;
+  animation: loncat-loncat 1.2s infinite;
+}
+@keyframes loncat-loncat {
+  0%,
+  100% {
+    transform: translateY(0); /* Posisi dasar */
+  }
+  50% {
+    transform: translateY(-100px); /* Melompat 100px ke atas */
+  }
+}
+
+/*? tabel nilai */
+/* ! table 1 */
+.vertical-table {
+  width: 100%; /* Atau lebar spesifik lainnya */
+  border-collapse: collapse; /* Menggabungkan border sel */
+  margin-top: 4rem;
+}
+
+.vertical-table caption {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.vertical-table caption span {
+  text-shadow: 0 0 8px rgb(108, 201, 255);
+}
+
+.vertical-table th,
+.vertical-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Styling khusus untuk header di kolom pertama */
+.vertical-table tbody th {
+  background-color: #f2f2f2; /* Warna latar belakang untuk header atribut */
+  font-weight: bold;
+}
+.vertical-table tbody td {
+  background-color: #0000008b; /* Warna latar belakang untuk header atribut */
+  font-weight: bold;
+}
+
+/* Styling untuk header di thead (nilai 1, nilai 2, dll.) */
+.vertical-table thead th {
+  background-color: #4caf50; /* Warna latar belakang untuk header nilai */
+  color: white;
+  text-align: left; /* Rata tengah untuk nilai-nilai header */
+  width: 200px;
+}
+.vertical-table thead td {
+  background-color: #4caf50; /* Warna latar belakang untuk header nilai */
+  color: white;
+  text-align: center; /* Rata tengah untuk nilai-nilai header */
+}
+/* ! table 2 */
+.vertical-table2 {
+  width: 100%; /* Atau lebar spesifik lainnya */
+  border-collapse: collapse; /* Menggabungkan border sel */
+  margin-top: 4rem;
+}
+
+.vertical-table2 caption {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.vertical-table2 caption span {
+  text-shadow: 0 0 8px rgb(108, 201, 255);
+}
+
+.vertical-table2 th,
+.vertical-table2 td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Styling khusus untuk header di kolom pertama */
+.vertical-table2 tbody th {
+  background-color: #f2f2f2; /* Warna latar belakang untuk header atribut */
+  font-weight: bold;
+}
+.vertical-table2 tbody td {
+  background-color: #0000008b; /* Warna latar belakang untuk header atribut */
+  font-weight: bold;
+}
+
+/* Styling untuk header di thead (nilai 1, nilai 2, dll.) */
+.vertical-table2 thead th {
+  background-color: #4caf50; /* Warna latar belakang untuk header nilai */
+  color: white;
+  text-align: left; /* Rata tengah untuk nilai-nilai header */
+  width: 200px;
+}
+.vertical-table2 thead td {
+  background-color: #4caf50; /* Warna latar belakang untuk header nilai */
+  color: white;
+  text-align: center; /* Rata tengah untuk nilai-nilai header */
+}
+
+/*? nilai rata rata */
+.nilai_rata-rata {
+  width: 30%; /* Atau lebar spesifik lainnya */
+  border-collapse: collapse; /* Menggabungkan border sel */
+  margin-top: 2rem;
+}
+.nilai_rata-rata th,
+.nilai_rata-rata td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+.nilai_rata-rata th {
+  background-color: lightskyblue;
+}
+.nilai_rata-rata td {
+  background-color: rgb(207, 237, 255);
+}
+
+/*? footer 1 */
+.footer1 {
+  background: linear-gradient(
+    to right,
+    rgb(92, 176, 255),
+    rgb(0, 132, 255),
+    rgb(92, 176, 255)
+  );
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  gap: -1.4rem;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  margin-top: 3rem;
+}
+
+.footer1 .div1 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+.footer1 .div1 .kata {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+}
+.footer1 .div1 .pencipta {
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+.footer1 .div2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer1 .div2 .p1 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+  text-align: center;
+}
+.footer1 .div2 .p2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+}
+.footer1 .div2 .p2 span {
+  color: rgb(201, 219, 255);
+  text-shadow: 3px 3px 10px rgb(0, 0, 0);
+}
+
+/*? footer 2 */
+.footer2 {
+  display: flex;
+  flex-direction: column;
+  gap: -1rem;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to right,
+    rgb(92, 176, 255),
+    rgb(0, 132, 255),
+    rgb(92, 176, 255)
+  );
+  border-radius: 9px;
+}
+
+.footer2 .div1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+.footer2 .div1 .kata {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+}
+.footer2 .div1 .pencipta {
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+.footer2 .div2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  justify-content: center;
+  align-items: center;
+}
+.footer2 .div2 .p1 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+  text-align: center;
+}
+.footer2 .div2 .p2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+}
+.footer2 .div2 .p2 span {
+  color: rgb(201, 219, 255);
+  text-shadow: 3px 3px 10px rgb(0, 0, 0);
+}
+
+/*? tampilan */
+@media (max-width: 770px) {
+  .container .foto img {
+    width: 8rem;
+  }
+  .container .foto h1 {
+    font-size: 1.3rem;
+  }
+
+  .container .keterangan .data {
+    font-size: 1.1rem;
+  }
+  .container .keterangan .pendidikan_sebelumnya {
+    font-size: 1rem;
+  }
+  .container .keterangan .pendidikan_sebelumnya p {
+    font-size: 0.8rem;
+  }
+  .container .keterangan .pindahan {
+    font-size: 1rem;
+  }
+  .container .keterangan p {
+    font-size: 0.8rem;
+  }
+
+  /*? tabel data */
+  .vertical-table caption {
+    font-size: 1rem;
+  }
+  .vertical-table th,
+  .vertical-table td {
+    font-size: 0.7rem;
+  }
+
+  .vertical-table2 caption {
+    font-size: 1rem;
+  }
+  .vertical-table2 thead th,
+  .vertical-table2 thead td {
+    font-size: 0.7rem;
+  }
+  .vertical-table2 tbody th,
+  .vertical-table2 tbody td {
+    font-size: 0.7rem;
+  }
+
+  .nilai_rata-rata th,
+  .nilai_rata-rata td {
+    font-size: 0.7rem;
+  }
+
+  /*? footer 1 */
+  .footer1 .div1 .kata {
+    font-size: 1.1rem;
+  }
+  .footer1 .div1 .pencipta {
+    font-size: 0.9rem;
+  }
+
+  .footer1 .div1 .pencipta {
+    font-size: 0.9rem;
+  }
+  .footer1 .div2 .p1 {
+    font-size: 0.9rem;
+  }
+  /*? footer 2 */
+  .footer2 .div1 .kata {
+    font-size: 1.1rem;
+  }
+  .footer2 .div1 .pencipta {
+    font-size: 0.8rem;
+  }
+
+  .footer2 .div2 .p1 {
+    font-size: 0.9rem;
+  }
+  .footer2 .div2 .p2 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 620px) {
+  /*? footer 1 */
+  .footer1 .div1 .kata {
+    font-size: 0.9rem;
+  }
+  .footer1 .div1 .pencipta {
+    font-size: 0.8rem;
+  }
+
+  .footer1 .div2 .p1 {
+    font-size: 0.8rem;
+  }
+  .footer1 .div2 .p2 {
+    font-size: 0.8rem;
+  }
+  /*? footer 2 */
+  .footer2 .div1 .kata {
+    font-size: 1rem;
+  }
+  .footer2 .div1 .pencipta {
+    font-size: 0.9rem;
+  }
+
+  .footer2 .div2 .p1 {
+    font-size: 0.8rem;
+  }
+  .footer2 .div2 .p2 {
+    font-size: 0.8rem;
+  }
+}

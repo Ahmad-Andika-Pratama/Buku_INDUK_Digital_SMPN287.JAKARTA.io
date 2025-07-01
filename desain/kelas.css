@@ -1,0 +1,76 @@
+.nav div .home {
+  background-color: rgba(87, 128, 141, 0.562);
+  width: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 20.3rem;
+  margin-right: -100rem;
+  transition: .80s ease-in-out;
+}
+.nav .home.keluar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 39.9rem;
+  margin-right: 0rem;
+}
+
+table {
+  margin-top: 6.5rem;
+  width: 100%;
+}
+
+table caption {
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table th {
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: rgb(93, 233, 255);
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  table caption {
+    font-size: 1.4rem;
+  }
+
+  table th {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 620px) {
+  table caption {
+    font-size: 1.1rem;
+  }
+
+  table th {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 607px) {
+  table {
+    margin-top: 9rem;
+  }
+}

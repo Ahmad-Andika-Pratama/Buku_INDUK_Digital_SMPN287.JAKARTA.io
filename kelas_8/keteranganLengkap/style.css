@@ -1,0 +1,49 @@
+body {
+ background-color: rgb(222, 250, 255);
+}
+
+/* close */
+
+nav div {
+ background-color: lightseagreen;
+ height: 1.8rem;
+ width: 1.6rem;
+ min-width: .1rem;
+ border-radius: 10px;
+ display: flex;
+ align-items: center;
+ margin-right: 1rem;
+ margin-top: 0.5rem;
+ cursor: pointer;
+ transition: 0.3s linear;
+}
+
+nav div:hover {
+ background-color: lightgray;
+}
+
+nav div a {
+ color: black;
+}
+
+/*? data siswa yang lengkap */
+/* .container {
+ margin-top: 3rem;
+} */
+
+.container .judul {
+ font-size: 1.8rem;
+ font-weight: bold;
+}
+
+.container p {
+ font-size: 1rem;
+ font-weight: 500;
+ font-family: sans-serif;
+}
+
+.container h1 {
+ font-size: 1.6rem;
+ font-family: sans-serif;
+ font-weight: 500;
+}
